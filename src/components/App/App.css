@@ -18,10 +18,16 @@
 }
 
 .page__button-container {
-  margin-top: 50px;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  right: 0;
 }
 
-button {
+.page__button-yes {
+  position: absolute;
+
   margin: 0;
   padding: 0;
   border: 0;
@@ -35,7 +41,7 @@ button {
   width: 130px;
 }
 
-button:hover {
+.page__button-yes:hover {
   cursor: pointer;
   color: black;
   background-color: transparent;
@@ -43,7 +49,18 @@ button:hover {
 }
 
 .page__button-no {
-  margin-right: 30px;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background-color: black;
+
+  padding: 14px;
+  font-size: 22px;
+  font-weight: 600;
+  color: white;
+  border-radius: 15px;
+  width: 130px;
+  height: 53px;
 }
 
 .page__title-yes {
