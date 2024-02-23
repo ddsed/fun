@@ -8,17 +8,17 @@
 
 .page__image {
   width: 420px;
-  margin-top: 30px;
 }
 
 .page__question {
   text-align: center;
   width: 630px;
   font-weight: 400;
+  margin: 0;
 }
 
 .page__button-container {
-  margin-top: 30px;
+  margin-top: 50px;
 }
 
 button {
@@ -35,6 +35,27 @@ button {
   width: 130px;
 }
 
+button:hover {
+  cursor: pointer;
+  color: black;
+  background-color: transparent;
+  border: 2px solid black;
+}
+
 .page__button-no {
   margin-right: 30px;
+}
+
+.page__title-yes {
+  margin: 0;
+  font-weight: 600;
+  font-size: 48px;
+}
+
+.page__react-player {
+  height: 550px !important;
+}
+
+.page__player-wrapper {
+  height: 550px !important;
 }
