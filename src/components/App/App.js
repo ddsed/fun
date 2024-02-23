@@ -1,10 +1,13 @@
 import React, {useState, useEffect} from 'react';
-import ReactPlayer from 'react-player'
+import ReactPlayer from 'react-player';
+import UnderConstruction from '../UnderConstruction/UnderConstruction';
 
 function App() {
   const[yesClicked, setYesClicked] = useState(false);
   const [yesButtonBottom, setYesButtonBottom] = useState('100px');
   const [noButtonPosition, setNoButtonPosition] = useState({bottom: '100px', right: 'calc(50vw + 15px)' });
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+  const isUnderConstruction = windowWidth < 1050;
 
   const handleButtonHover = () => {
     const newPosition = {
@@ -32,6 +35,7 @@ function App() {
         right: 'calc(50vw + 15px)',
       });
       setYesButtonBottom(newBottom);
+      setWindowWidth(window.innerWidth);
     };
 
     handleResize();
@@ -46,10 +50,18 @@ function App() {
 
   return (
     <div className="page">
-      {!yesClicked ?
+      { isUnderConstruction 
+      ? 
+      (
+        <UnderConstruction />
+      ) 
+      : 
+      (
+      !yesClicked 
+      ?
       <>
       <img src={require(`../../images/cover.jpg`)} alt="Gosling" className="page__image" />
-      <h1 className='page__question'>Wanna switch your {'{'}AS IS{'}'} = Ekaterinburg to {'{'}TO BE{'}'} = Kaliningrad?</h1>
+      <h1 className='page__question'>Wanna switch your {'{'}AS IS{'}'} = Ekaterinburg to {'{'}TO BE{'}'} = Kaliningrad in March?</h1>
       <div className='page__button-container'>
         <button 
           className='page__button-no' 
@@ -63,7 +75,7 @@ function App() {
         style={{ position: 'absolute', bottom: yesButtonBottom, left: 'calc(50vw + 15px)' }}
         onClick={() => { setYesClicked(true)}}
         >
-          Yep
+          Yep :)
         </button>
       </div>
       </>
@@ -79,7 +91,8 @@ function App() {
       </div>
       <h1 className='page__title-yes'>!!! I am glad AF !!!</h1>
       </>
-      }
+    )
+    }
     </div>
   );
 }
