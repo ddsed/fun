@@ -1,3 +1,3 @@
 # Having fun
 
-[Deploy link]()
+[Deploy link](https://ddsed.github.io/fun/)
