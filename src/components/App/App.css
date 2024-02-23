@@ -1,0 +1,40 @@
+.page {
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.page__image {
+  width: 420px;
+  margin-top: 30px;
+}
+
+.page__question {
+  text-align: center;
+  width: 630px;
+  font-weight: 400;
+}
+
+.page__button-container {
+  margin-top: 30px;
+}
+
+button {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background-color: black;
+
+  padding: 14px;
+  font-size: 22px;
+  font-weight: 600;
+  color: white;
+  border-radius: 15px;
+  width: 130px;
+}
+
+.page__button-no {
+  margin-right: 30px;
+}
